@@ -18,14 +18,14 @@ def abrir_archivo():
             # Traducir el contenido a binario
             contenido_binario = texto_a_binario(contenido)
 
-            archivo_salida = filedialog.asksaveasfilename(defaultextension=".bin", filetypes=[("Archivos binarios", "*.bin")])
+            # Nombre del archivo binario de salida (log.bin)
+            archivo_salida = "log.bin"
 
-            if archivo_salida:
-                # Guardar el contenido binario en un archivo binario
-                with open(archivo_salida, 'wb') as salida:
-                    salida.write(contenido_binario.encode())
+            # Guardar el contenido binario en el archivo binario de salida
+            with open(archivo_salida, 'wb') as salida:
+                salida.write(contenido_binario.encode())
 
-                mensaje.config(text=f'El archivo "{archivo_entrada}" ha sido traducido y guardado en "{archivo_salida}".')
+            mensaje.config(text=f'El archivo "{archivo_entrada}" ha sido traducido y guardado en "{archivo_salida}".')
 
         except FileNotFoundError:
             mensaje.config(text=f'No se pudo encontrar el archivo "{archivo_entrada}".')
