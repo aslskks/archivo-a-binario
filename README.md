@@ -1,6 +1,6 @@
-# traductor morze
+# archivo a binario
 
-&nbsp;Este es un traductor de texto a morze y viseversa
+&nbsp; este traduce un archivo a binario sin proteccion no se puede reverser
 
 ## Requisitos
 

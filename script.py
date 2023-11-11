@@ -1,6 +1,5 @@
 import tkinter as tk
 from tkinter import filedialog
-from os import remove
 def main():
     # Función para traducir texto a binario
     def texto_a_binario(texto):
@@ -27,7 +26,6 @@ def main():
                     salida.write(contenido_binario.encode())
     
                 mensaje.config(text=f'El archivo "{archivo_entrada}" ha sido traducido y guardado en "{archivo_salida}".')
-                remove(archivo_entrada)
     
             except FileNotFoundError:
                 mensaje.config(text=f'No se pudo encontrar el archivo "{archivo_entrada}".')
